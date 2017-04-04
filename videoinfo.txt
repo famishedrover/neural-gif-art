@@ -1,0 +1,2 @@
+No. of Frames :64
+FPS :13.0

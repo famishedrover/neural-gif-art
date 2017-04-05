@@ -12,12 +12,15 @@ count = 0
 try :
 	while cap.isOpened():
 	    ret,frame = cap.read()
-	    cv2.imshow('window-name',frame)
-	    cv2.imwrite("./frames/frame%d.jpg" % count, frame)
-	    count = count + 1
-	    if cv2.waitKey(10) & 0xFF == ord('q'):
-	        break
-	cap.release()
+	    # cv2.imshow('window-name',frame)
+	    if ret :
+	    	cv2.imwrite("./frames/frame%d.jpg" % count, frame)
+	    	count = count + 1
+	    else :
+	    	break
+	#     if cv2.waitKey(10) & 0xFF == ord('q'):
+	#         break
+	# cap.release()
 	cap.destroyAllWindows()
 except :
 	pass

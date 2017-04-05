@@ -23,7 +23,7 @@ try :
 	# cap.release()
 	cap.destroyAllWindows()
 except :
-	pass
+	print ('HANDLED :Caught Error @ cap.isOpened()')
 
 
 fps = cap.get(cv2.cv.CV_CAP_PROP_FPS)

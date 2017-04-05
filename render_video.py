@@ -3,10 +3,7 @@ import cv2
 
 filelist = [ f for f in os.listdir("./output") if f.endswith(".avi") ]
 for f in filelist:
-    os.remove(f)
-
-
-
+    os.remove('./output/'+f)
 
 with open('videoinfo.txt','r') as f :
 	x= f.read()
